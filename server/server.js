@@ -14,6 +14,8 @@ const server = new ApolloServer({
   context: authMiddleware
 });
 
+app.set('port', PORT);
+
 server.applyMiddleware({ app });
 
 app.use(express.urlencoded({ extended: false }));
